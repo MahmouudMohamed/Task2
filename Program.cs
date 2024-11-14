@@ -8,7 +8,7 @@
                 char op ;
                 List<int> listOfNumber = new List<int>();
                 Console.WriteLine("Main Manu");
-                Console.WriteLine("=========================================");
+                Console.WriteLine("=======================================");
                 do
                 {
                     Console.WriteLine("P - Print Numbers");
