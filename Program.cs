@@ -30,13 +30,31 @@
                         }
                         else
                         {
-                            Console.Write("[");
+                            int sortedList;
                             for (int i = 0; i < listOfNumber.Count; i++)
-                                Console.Write($" {listOfNumber[i]} ");
-                            Console.WriteLine("]");
-                            Console.WriteLine("\n");
-                        }
+                            {
+                                for (int x = i + 1; x < listOfNumber.Count; x++)
+                                {
 
+                                    if (listOfNumber[i] > listOfNumber[x])
+                                    {
+                                        sortedList = listOfNumber[x];
+                                        listOfNumber[x] = listOfNumber[i];
+                                        listOfNumber[i] = sortedList;
+                                    }
+
+                                }
+
+
+                            }
+                            Console.Write("[ ");
+                            for (int i = 0; i < listOfNumber.Count; i++)
+                            {
+                                Console.Write($"{listOfNumber[i]} ");
+
+                            }
+                            Console.WriteLine("]");
+                        }
                     }
                     else if (op == 'A')
                     {
@@ -139,10 +157,10 @@
                         }
                         if (findNumber != true)
                         {
-                            listOfNumber.Add(numberOfSearch);
-                            Console.WriteLine($"Number:{numberOfSearch} isn't Exist in The List\n");
+                            Console.WriteLine($"The Number:{numberOfSearch} is Not Exist\n");
                             Console.WriteLine("=========================================");
                         }
+                        
                     }
                     else if (op == 'C')
                     {
